@@ -1,0 +1,14 @@
+[
+  {"id":"a1-articles","level":"A1","title":"Артиклі: der/die/das, ein/eine","explanation":"Визначений артикль der/die/das вказує на конкретний предмет. Невизначений ein/eine — на будь-який. Рід іменника визначає форму артикля.","examples":["Das ist ein Tisch.","Die Frau ist hier.","Ich habe eine Frage."]},
+  {"id":"a1-verb2","level":"A1","title":"Порядок слів: дієслово на 2-му місці","explanation":"У простому німецькому реченні відмінений дієслівний елемент — на другій позиції.","examples":["Ich gehe nach Hause.","Morgen gehe ich ins Kino."]},
+
+  {"id":"a2-prasens-trennbar","level":"A2","title":"Відокремлювані дієслова","explanation":"Префікс відокремлюється і стає в кінець речення у Präsens та Imperativ.","examples":["Ich stehe um 7 Uhr auf.","Er ruft seine Mutter an."]},
+
+  {"id":"b1-perfekt","level":"B1","title":"Perfekt з haben/sein","explanation":"Минулій час для розмовної мови. Допоміжне дієслово haben/sein + Partizip II в кінці.","examples":["Ich habe gegessen.","Er ist nach Berlin gefahren."]},
+
+  {"id":"b2-nebensatz","level":"B2","title":"Підрядні речення: dass, weil, obwohl","explanation":"У підрядних реченнях дієслово стоїть в кінці. Сполучники впливають на порядок слів.","examples":["Ich denke, dass er kommt.","Weil es regnet, bleiben wir zu Hause.","Obwohl er müde ist, arbeitet er weiter."]},
+
+  {"id":"c1-konjunktiv-ii","level":"C1","title":"Konjunktiv II: нереальність і ввічливість","explanation":"Використовується для уявних ситуацій, порад і ввічливих формулювань. Часто з würden + Infinitiv або формами сильних дієслів (hätte, wäre, könnte).","examples":["Wenn ich Zeit hätte, würde ich mehr lesen.","Könnten Sie mir helfen?", "Er wäre gern dabei."]},
+
+  {"id":"c2-partizipial","level":"C2","title":"Partizipialkonstruktionen","explanation":"Скорочені підрядні конструкції з Partizip I/II для компактного, формального стилю.","examples":["In Berlin lebend, kennt er die Stadt gut.","Von allen bewundert, blieb sie bescheiden."]}
+]

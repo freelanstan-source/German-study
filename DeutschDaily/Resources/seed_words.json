@@ -1,0 +1,20 @@
+[
+  {"id":"a1-haus","german":"das Haus","translation":"дім","partOfSpeech":"noun","example":"Das Haus ist groß.","level":"A1","tags":["основи"]},
+  {"id":"a1-katze","german":"die Katze","translation":"кіт/кицька","partOfSpeech":"noun","example":"Die Katze schläft.","level":"A1","tags":["тварини"]},
+  {"id":"a1-gehen","german":"gehen","translation":"йти","partOfSpeech":"verb","example":"Ich gehe nach Hause.","level":"A1","tags":["дієслово"]},
+
+  {"id":"a2-frühstück","german":"das Frühstück","translation":"сніданок","partOfSpeech":"noun","example":"Wir haben Frühstück um acht.","level":"A2","tags":["їжа"]},
+  {"id":"a2-spät","german":"spät","translation":"пізно","partOfSpeech":"adjective","example":"Ich komme spät.","level":"A2","tags":["час"]},
+
+  {"id":"b1-erfahrung","german":"die Erfahrung","translation":"досвід","partOfSpeech":"noun","example":"Ich habe viel Erfahrung.","level":"B1","tags":["робота"]},
+  {"id":"b1-beschreiben","german":"beschreiben","translation":"описувати","partOfSpeech":"verb","example":"Er beschreibt die Situation.","level":"B1","tags":["дієслово"]},
+
+  {"id":"b2-entwickeln","german":"entwickeln","translation":"розвивати/розробляти","partOfSpeech":"verb","example":"Sie entwickeln eine App.","level":"B2","tags":["робота"]},
+  {"id":"b2-komplex","german":"komplex","translation":"складний","partOfSpeech":"adjective","example":"Das Thema ist komplex.","level":"B2","tags":["опис"]},
+
+  {"id":"c1-nachhaltig","german":"nachhaltig","translation":"стійкий (sustainable)","partOfSpeech":"adjective","example":"Nachhaltige Entwicklung ist wichtig.","level":"C1","tags":["суспільство"]},
+  {"id":"c1-umsetzen","german":"umsetzen","translation":"впроваджувати","partOfSpeech":"verb","example":"Wir setzen die Strategie um.","level":"C1","tags":["робота"]},
+
+  {"id":"c2-subtil","german":"subtil","translation":"витончений/тонкий","partOfSpeech":"adjective","example":"Die Ironie ist sehr subtil.","level":"C2","tags":["стиль"]},
+  {"id":"c2-dilemma","german":"das Dilemma","translation":"дилема","partOfSpeech":"noun","example":"Ein moralisches Dilemma.","level":"C2","tags":["абстракція"]}
+]

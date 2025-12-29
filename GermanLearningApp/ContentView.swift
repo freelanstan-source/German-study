@@ -1,47 +1,79 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var userProgress = UserProgress()
-    @StateObject private var dataManager = DataManager()
-    
+    @State private var words: [Word] = SampleData.words
+    @State private var showOnlyFavorites = false
+
+    var filtered: [Word] {
+        showOnlyFavorites ? words.filter { $0.isFavorite } : words
+    }
+
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Головна")
+        NavigationView {
+            List {
+                Toggle("Only favorites", isOn: $showOnlyFavorites)
+                ForEach(filtered) { word in
+                    NavigationLink(destination: WordDetailView(word: binding(for: word))) {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(word.german).font(.headline)
+                                Text(word.partOfSpeech).font(.subheadline).foregroundColor(.secondary)
+                            }
+                            Spacer()
+                            if word.isFavorite {
+                                Image(systemName: "star.fill").foregroundColor(.yellow)
+                            }
+                        }
+                        .padding(.vertical, 8)
+                    }
                 }
-            
-            GrammarView()
-                .tabItem {
-                    Image(systemName: "book.fill")
-                    Text("Граматика")
-                }
-            
-            VocabularyView()
-                .tabItem {
-                    Image(systemName: "textformat.abc")
-                    Text("Слова")
-                }
-            
-            DailyStudyView()
-                .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Щоденно")
-                }
-            
-            ProgressView()
-                .tabItem {
-                    Image(systemName: "chart.bar.fill")
-                    Text("Прогрес")
-                }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("German Study")
         }
-        .environmentObject(userProgress)
-        .environmentObject(dataManager)
-        .accentColor(.blue)
+    }
+
+    private func binding(for word: Word) -> Binding<Word> {
+        guard let index = words.firstIndex(where: { $0.id == word.id }) else {
+            return .constant(word)
+        }
+        return $words[index]
     }
 }
 
-#Preview {
-    ContentView()
+struct WordDetailView: View {
+    @Binding var word: Word
+    @State private var showTranslation = false
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(word.german)
+                .font(.largeTitle)
+                .padding()
+
+            if showTranslation {
+                Text(word.translation)
+                    .font(.title2)
+                    .foregroundColor(.blue)
+                    .padding()
+            } else {
+                Text("Tap to reveal translation")
+                    .foregroundColor(.secondary)
+            }
+
+            Button(showTranslation ? "Hide" : "Reveal") {
+                withAnimation { showTranslation.toggle() }
+            }
+            .buttonStyle(.borderedProminent)
+
+            Button(word.isFavorite ? "Unfavorite" : "Favorite") {
+                word.isFavorite.toggle()
+            }
+            .padding(.top)
+
+            Spacer()
+        }
+        .padding()
+        .navigationTitle(word.german)
+    }
 }
